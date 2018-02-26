@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+html,body{
+    height:100%;
+    width: 100%;
+    background: linear-gradient(#fff,#333);
+}
+
+.wrapper{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:140px;
+    height:140px;
+    margin-left:-70px;
+    margin-top: -70px;
+}
+
+.wrapper .btn{
+    position:relative;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background:deeppink;
+    color:#fff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px  rgba(0,0,0,0.2);
+    text-align: center;
+    line-height: 140px;
+}
+
+.wrapper .btn:hover{
+    background:#c71585;
+    color:orange;
+}
+
+.wrapper ul{
+    position:absolute;
+    height:100%;
+    width:100%;
+}
+.wrapper li{
+    position: absolute;
+    height:100%;
+    width:100%;
+    transition:all 0.8s ease-in-out;
+}
+.wrapper li div{
+    position:absolute;
+    width:0px;
+    height:0px; 
+    background:#fff;
+    border-radius:50%;
+    top:-120px;
+    left:50%;
+    text-align:center;
+    line-height:0px;
+    overflow: hidden;
+    box-shadow: none;
+    font-size:0px;
+    transition:all 0.8s ease-in-out,color 0.1s,background 0.1s;
+    cursor:pointer;
+}
+.wrapper li div:hover{
+    color:orange;
+}
+
+.open li div{
+    height:80px;
+    width:80px;
+    margin-left:-40px;
+    line-height: 80px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}

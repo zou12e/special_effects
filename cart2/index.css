@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.wrapper{
+    width:100%;
+}
+.leftBox ul{
+    width:70%;
+    min-height:200px;
+    margin:20px;
+}
+.leftBox ul li{
+    float: left;
+    width:180px;
+    height:300px;
+    margin-left: 20px;
+}
+.leftBox ul li img{
+    width:100%;
+    height:70%;
+    border:1px solid #ddd;
+}
+.leftBox ul li span{
+    font-size: 16px;
+    font-weight:bold;
+}
+.leftBox ul li .money{
+    color:#ff0036;
+    margin:10px;
+} 
+.leftBox ul li button{
+    height:35px;
+    width:80px;
+    color:#fff;
+    font-weight:bold;
+    margin-top:10px;
+    margin-right:5px;
+}
+.wrapper ul li .addLike{
+    background-color:#ff0036;
+}
+.wrapper ul li .addShop{
+    background-color:#f40;
+}
+.rightBox{
+    width:30%;
+    height:100%;
+    border:1px solid #ddd;
+    position:fixed;
+    right:0;
+    top:0;
+    background-color:#f5f5f5;
+    display: none;
+}
+table,thead{
+    width:100%;
+}
+tr th{
+    width:25%;
+    height:30px;
+    background-color:#f40;
+    font-size: 16px;
+    padding:2px 0;
+    color:#fff;
+}
+tr td{
+    text-align:center;
+    padding:5px 0;
+    background-color:#fff;
+    font-size:14px;
+}
+tr td a{
+    padding:2px 5px;
+    border:1px solid #ddd;
+    cursor: pointer;
+}
+tbody{
+    min-height:200px;
+}
+.rightBox .totalMoney{
+    color:#ed145b;
+}
+.allMoney{
+    top:60%;
+    font-weight:bold;
+    position:absolute;
+    left:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
