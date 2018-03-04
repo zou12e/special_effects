@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 常用布局1 </title>
+	
+	<style type="text/css">
+		body,p,ul,li { margin: 0;padding: 0; top: 0;left: 0; font-size: 14px; }
+		input {outline: none;}
+		label,label input {cursor: pointer;}
+		
+		.node {
+			background-color: #eee;
+			width: 100%;
+			margin: 0 ;
+			
+		}
+
+		.title {
+			background-color: #666;
+			color: #fff;
+			line-height: 40px;
+			font-size: 16px;
+			padding:  0 0  0 10px;
+		}
+		.title em {
+			margin-left: 10px;font-style: normal;
+			
+		}
+		.title a {
+			color: #ff6600;
+		}
+
+		.content {
+			padding: 10px 10px;
+		}
+ 		pre {
+ 			padding: 10px;
+ 			border: 1px dotted  #000;
+ 		}
+ 		.c {
+ 			margin: 10px;
+ 			padding: 10px;
+ 			background-color: #666666;
+ 			color: #fff;
+ 		}
+ 		.cd {
+ 			margin: 10px;
+ 		}
+		.c1 {
+			text-align: center;
+		}
+		.s {background-color: #ccc;text-align: center;}
+		.s1 {
+			padding: 5px;
+		}
+		.d {
+			width: 100px;
+			text-align: center;
+			background-color: #fff;
+			color: #000;
+			line-height: 100px;
+		}
+		.btn { width: 100%;}
+
+		.tradition {
+			position: relative;
+		}
+		.tradition_title ,.tradition_btn{
+			position: absolute;
+			top: 0;
+			width: 60px;
+		}
+		.tradition_content {
+			margin-left: 60px;
+		}
+		.tradition_content_short {
+			margin-right: 70px;
+		}
+		.tradition_content input {
+			width: 100%;
+		}
+		.tradition_btn {
+			right: 0;
+		}
+
+		.flexbox {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+		}
+
+		.flexbox_title {
+			min-width: 60px;
+		}
+		.flexbox_content,.flexbox_content input {
+			width: 100%;
+		}
+		.flexbox_bottom {
+			min-width: 60px;
+			margin: 0 0 0 10px;
+		}
+		 
+	</style>
+</head>
+<body>
+	
+
+	<h1>自适应屏幕宽度布局</h1>
+
+	<div class='node'>
+		<div class='title'>1.传统方法<em>(<a target='_blank' href='https://bitbucket.org/281933726/csscase3/src' >点击查看项目源码</a>)</em></div>
+		<div class='content ' >
+			<div class='c '>
+				
+				<div class="tradition">
+					<span class='tradition_title' >用户名</span>
+					<div class='tradition_content' >
+						<input />
+					</div>
+				</div>
+
+				<div class="tradition">
+					<span class='tradition_title' >密码</span>
+					<div class='tradition_content' >
+						<input />
+					</div>
+				</div>
+
+				<div class="tradition">
+					<span class='tradition_title' >验证码</span>
+					<div class='tradition_content tradition_content_short' >
+						<input />
+					</div>
+
+					<input class='tradition_btn' type='button' value='按钮' />
+				</div>
+
+				<div class="tradition">
+					<input class='btn' type='button' value='登陆' />
+				</div>
+
+			</div>
+			<div class='cd'>
+<pre>
+.tradition {
+	position: relative;
+}
+.tradition_title ,.tradition_btn{
+	position: absolute;
+	top: 0;
+	width: 60px;
+}
+.tradition_content {
+	margin-left: 60px;
+}
+.tradition_content_short {
+	margin-right: 70px;
+}
+.tradition_content input {
+	width: 100%;
+}
+.tradition_btn {
+	right: 0;
+}
+</pre>
+			</div>
+		</div>
+
+	</div>
+
+	<div class='node'>
+		<div class='title'>2.新css3方法</div>
+		<div class='content ' >
+			<div class='c '>
+				
+				<div class="flexbox">
+					<span class='flexbox_title' >用户名</span>
+					<div class='flexbox_content' >
+						<input style='' />
+					</div>
+				</div>
+
+				<div class="flexbox">
+					<span class='flexbox_title' >密码</span>
+					<div class='flexbox_content' >
+						<input style='' />
+					</div>
+				</div>
+
+				<div class="flexbox">
+					<span class='flexbox_title' >密码</span>
+					<div class='flexbox_content' >
+						<input style='' />
+					</div>
+					<input class='flexbox_bottom' type='button' value='按钮' />
+				</div>
+				
+				<div class="flexbox">
+					<input class='btn' type='button' value='登陆' />
+				</div>
+
+			</div>
+			<div class='cd'>
+<pre>
+.flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.flexbox_title {
+	min-width: 60px;
+}
+.flexbox_content,.flexbox_content input {
+	width: 100%;
+}
+.flexbox_bottom {
+	min-width: 60px;
+	margin: 0 0 0 10px;
+}
+</pre>
+			</div>
+		</div>
+
+	</div>
+
+	 
+</body>
+</html>

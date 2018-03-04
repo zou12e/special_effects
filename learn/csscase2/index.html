@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 最全面的水平垂直居中方案 </title>
+
+	<style type="text/css">
+		body,p,ul,li { margin: 0;padding: 0; top: 0;left: 0; font-size: 14px; }
+		input {outline: none;}
+		label,label input {cursor: pointer;}
+		
+		.node {
+			background-color: #eee;
+			width: 100%;
+			margin: 0 ;
+			
+		}
+
+		.title {
+			background-color: #666;
+			color: #fff;
+			line-height: 40px;
+			font-size: 16px;
+			padding:  0 0  0 10px;
+		}
+		.title em {
+			margin-left: 10px;font-style: normal;
+			
+		}
+		.title a {
+			color: #ff6600;
+		}
+
+		.content {
+			padding: 10px 10px;
+		}
+ 		pre {
+ 			padding: 10px;
+ 			border: 1px dotted  #000;
+ 		}
+ 		.c {
+ 			margin: 10px;
+ 			padding: 10px;
+ 			background-color: #666666;
+ 			color: #fff;
+ 		}
+ 		.cd {
+ 			margin: 10px;
+ 		}
+		.c1 {
+			text-align: center;
+		}
+		.s {background-color: #ccc;text-align: center;}
+		.s1 {
+			padding: 5px;
+		}
+		.d {
+			width: 100px;
+			text-align: center;
+			background-color: #fff;
+			color: #000;
+			line-height: 100px;
+		}
+		.d2 {
+			margin: 0 auto;
+		}
+		.d3 {
+			display: inline-block;
+			margin-right: 10px;
+		}	
+		.d3:last-child {
+			margin-right: 0;
+		}
+		.flexbox1 {
+			-webkit-justify-content:center;
+			justify-content:center;
+		    display:flex;
+		    display:-webkit-flex;
+		}
+		.flexbox1 .d {
+			margin-right: 10px;
+		}
+		.flexbox1 .d:last-child {
+			margin-right: 0;
+		}
+		
+		.cbig {
+			height: 300px;
+			position:relative;
+		}
+		.d4{
+		    position:absolute;
+		    top:50%;
+		    left:50%;
+		    margin:-50px 0 0 -50px;
+		}
+		.d5{
+			height: 100px;
+		    position:absolute;
+		    margin:auto;
+		    top:0;
+		    bottom:0;
+		    left:0;
+		    right:0;
+		}
+		.content-table {
+			display: table;
+			width: 100%;
+		}
+		.c6 {
+			 width: 100%;
+		     display:table-cell;
+		     text-align:center;
+		     vertical-align:middle;
+		}
+		.s6 {
+			background-color: #ccc;
+			padding: 5px;
+		}
+		.s7 {
+			width: 100px;
+			line-height: 100px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+		}
+		.c8 {
+			display:flex;
+			display:-webkit-flex;
+	     	justify-content:center;
+	    	-webkit-justify-content:center;
+	    	align-items: center;
+	    	-webkit-align-items: center;
+		}
+		.s8 {
+			width: 100px;
+			line-height: 100px;
+		}
+	</style>
+</head>
+<body>
+	
+
+	
+
+	<div class='node'>
+		<div class='title'>1.行内元素的水平居中<em>(<a target='_blank' href='https://bitbucket.org/281933726/csscase2/src' >点击查看项目源码</a>)</em></div>
+		<div class='content ' >
+			<div class='c c1'>
+				<span class='s s1'>#内容</span>
+			</div>
+			<div class='cd'>
+<pre>
+.c1 {
+    text-align: center;
+}	
+</pre>
+			</div>
+		</div>
+
+	</div>
+
+	<div class='node'>
+		<div class='title'>2.块状元素的水平居中 </div>
+		<div class='content ' >
+			<div class='c'>
+				<div class='d d2'>#内容</div>
+			</div>
+			<div class='cd'>
+<pre>
+.d2 {
+    margin: 0 auto;
+}	
+</pre>
+			</div>
+		</div>
+
+	</div>
+
+	<div class='node'>
+		<div class='title'>3.多个块状元素的水平居中 </div>
+		<div class='content ' >
+			<div class='c c1'>
+				<div class='d d3'>#内容1</div>
+				<div class='d d3'>#内容2</div>
+				<div class='d d3'>#内容3</div>
+			</div>
+			<div class='cd'>
+<pre>
+.c1 {
+    text-align: center;
+}
+.d3 {
+    display: inline-block;
+}	
+</pre>
+			</div>
+		</div>
+
+		<div class='content ' >
+			<div class='c flexbox1'>
+				<div class='d '>#内容1</div>
+				<div class='d '>#内容2</div>
+				<div class='d '>#内容3</div>
+			</div>
+			<div class='cd'>
+<pre>
+.flexbox1 {
+    -webkit-justify-content:center;
+    justify-content:center;
+    display:flex;
+    display:-webkit-flex;
+}	
+/**新的css方法，如果没有效果，浏览器不兼容*/	
+</pre>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class='node'>
+		<div class='title'>4.已知高度宽度元素的水平垂直居中 </div>
+		<div class='content ' >
+			<div class='c cbig'>
+				<div class='d d4'>#内容</div>
+			</div>
+			<div class='cd'>
+<pre>
+.cbig {
+    position:relative;
+}
+.d4{
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-50px 0 0 -50px;
+}	
+</pre>
+			</div>
+		</div>
+
+		<div class='content ' >
+			<div class='c cbig'>
+				<div class='d d5'>#内容</div>
+			</div>
+			<div class='cd'>
+<pre>
+.cbig {
+    position:relative;
+}
+.d5{
+    width:100px;
+    height:100px;
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}	
+</pre>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class='node'>
+		<div class='title'>5.未知高度和宽度元素的水平垂直居中 </div>
+		<div class='content ' >
+			<div class='content-table ' >
+			
+				<div class='c c6 cbig'>
+					<span class='s s6'>#内容</span>
+				</div>
+			</div>
+			<div class='cd'>
+<pre>
+.content-table {
+    display: table;
+    width: 100%;
+}
+.c6 {
+    width: 100%;
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+}
+</pre>
+			</div>
+		</div>
+
+
+		<div class='content ' >
+			<div class='c cbig'>
+				<span class='s s7'>#内容</span>
+			</div>
+			<div class='cd'>
+<pre>
+.c7 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+</pre>
+			</div>
+		</div>
+
+		<div class='content ' >
+			<div class='c c8 cbig'>
+				<span class='s s8'>#内容</span>
+			</div>
+			<div class='cd'>
+<pre>
+.c8 {
+    display:flex;
+    display:-webkit-flex;
+    justify-content:center;
+    align-items: center;
+    -webkit-align-items: center;
+}
+</pre>
+			</div>
+		</div>
+		
+	</div>
+
+	 
+
+
+
+</body>
+</html>

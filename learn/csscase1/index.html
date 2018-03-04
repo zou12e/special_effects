@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 伪类、伪元素、选择器的使用</title>
+
+	<style type="text/css">
+		body,p,ul,li { margin: 0;padding: 0; top: 0;left: 0; font-size: 14px; }
+		input {outline: none;}
+		label,label input {cursor: pointer;}
+		
+		.node {
+			background-color: #eee;
+			width: 100%;
+			margin: 0 ;
+			
+		}
+
+		.title {
+			background-color: #666;
+			color: #fff;
+			line-height: 40px;
+			font-size: 16px;
+			padding:  0 0  0 10px;
+		}
+		.title em {
+			margin-left: 10px;font-style: normal;
+			
+		}
+		.title a {
+			color: #ff6600;
+		}
+
+		.content {
+			padding: 10px 50px;
+		}
+		.d {margin:10px 0 40px;}
+
+		.d1 {
+			border-bottom: 1px solid #333;
+			width: 200px;
+			position: relative;
+		}
+		.d1:after {
+			display: block;
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 10px;
+			border-left: 1px solid #333;
+		}
+		.d1:before {
+			display: block;
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			height: 10px;
+			border-right: 1px solid #333;
+		}
+		.d1 input {border: none;background-color: #eee;width: 190px;height: 20px;line-height: 20px;padding-left: 5px;}
+		.d1 input:focus {
+			color: red;
+		}
+
+		.d2 {
+			
+			width: 180px;
+			height: 80px;
+			border-radius: 30px;
+			position: relative;
+			background: #fff;
+			padding: 15px;
+			line-height: 24px;
+			color: #ff6600;
+		}
+
+		.d2:after {
+			content: "";
+			display:block;
+			position: absolute;
+			left: 195px;
+			top: 15px;
+			width: 0px;
+			height: 0px;
+			border-width: 13px  13px 13px   25px; 
+			border-style:solid; 
+			border-color:  transparent  transparent transparent  #fff ; 
+		}
+
+		.d3 label,.d4 label {
+			margin-right: 10px;
+		}
+		.d3 input{
+			display: inline-block;
+			width: 24px;
+			height: 1px;
+			position: relative;
+			overflow: visible;
+			border: 0;
+			background: 0 0;
+			-webkit-appearance: none;
+			outline: 0;
+			margin:0 10px 3px 0;
+			vertical-align: middle;
+		}
+		.d3 input:before {
+			content: '';
+			display: block;
+			width: 24px;
+			height: 24px;
+			border: 1px solid #dfe0e1;
+			border-radius: 13px;
+			-webkit-background-clip: padding-box;
+			background-clip: padding-box;
+			position: absolute;
+			left: 0;
+			top: -14px;
+		}
+
+		.d3 input:checked:after {
+			content: '';
+			display: block;
+			width: 14px;
+			height: 14px;
+			background: #1cb7f0;
+			border-radius: 7px;
+			position: absolute;
+			left: 6px;
+			top: -8px;
+		}
+
+		.d4 input{
+			display: inline-block;
+			height: 1px;
+			position: relative;
+			overflow: visible;
+			border: 0;
+			background: 0 0;
+			-webkit-appearance: none;
+			outline: 0;
+			margin:0 0px 3px 0;
+			vertical-align: middle;
+			width: 30px;
+		}
+		.d4 input:before {
+			background: url(icon_check.png) -1px -2px no-repeat;
+			content: "";
+			background-size: 23px 23px;
+			display: block;
+			width: 23px;
+			height: 23px;
+			border: none;
+			position: absolute;
+			left: 0;
+			top: -10px;
+		}
+
+		.d4 input:checked:after {
+			background: url(icon_checked.png) -1px -2px no-repeat;
+			content: "";
+			background-size: 23px 23px;
+			display: block;
+			width: 23px;
+			height: 23px;
+			border: none;
+			position: absolute;
+			left: 0;
+			top: -10px;
+
+		}
+		
+		.d5 input {
+			line-height: 30px;
+			background-color: #598EDE;
+			border-radius: 5px;
+			color: #fff;
+			font-size: 14px;
+			border: none;
+		}
+		.d5 input:disabled {
+			background-color: #ddd;
+		}
+		.d6  {
+			height: 200px;
+		}
+		.d6 input{
+			width: 52px;
+			height: 32px;
+			position: absolute;
+			z-index: 10;
+			border: 0;
+			background: 0 0;
+			-webkit-appearance: none;
+			outline: 0;
+		}
+		.d6 input:before {
+			content: ''; 
+			width: 50px;
+			height: 30px;
+			border: 1px solid #dfdfdf;
+			background-color: #fdfdfd;
+			border-radius: 20px;
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			-webkit-user-select: none;
+			user-select: none;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+			border-color: #dfdfdf;
+			-webkit-box-shadow: #dfdfdf 0 0 0 0 inset;
+			box-shadow: #dfdfdf 0 0 0 0 inset;
+			-webkit-transition: border .4s,-webkit-box-shadow .4s;
+			transition: border .4s,box-shadow .4s;
+			-webkit-background-clip: content-box;
+			background-clip: content-box;
+		}
+
+		.d6 input:after {
+			content: '';
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 1px;
+			left: 0;
+			border-radius: 100%;
+			background-color: #fff;
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
+			box-shadow: 0 1px 3px rgba(0,0,0,.4);
+			-webkit-transition: left .2s;
+			transition: left .2s;
+		}
+
+		.d6 input:checked:before {
+			border-color: #64bd63;
+			-webkit-box-shadow: #64bd63 0 0 0 16px inset;
+			box-shadow: #64bd63 0 0 0 16px inset;
+			background-color: #64bd63;
+			transition: border .4s,box-shadow .4s,background-color 1.2s;
+			-webkit-transition: border .4s,-webkit-box-shadow .4s,background-color 1.2s;
+			background-color: #64bd63;
+
+		}
+
+		.d6 input:checked:after {
+			left: 21px;
+
+		}
+
+		.d7 {
+			color: red;
+		}
+
+		
+
+
+		.f1 a:hover{
+			color: red;
+			text-decoration: underline;
+		}
+
+		.f2 a{
+			display: block;
+			width: 50px;height: 50px;
+			background-color: red;
+			transition: width 2s,margin-top,2s;
+
+		}
+		.f2 a:hover{
+			width: 100px;
+			height: 50px;
+
+		}
+
+
+
+		.f3 a{
+			display: block;
+			width: 50px;height: 50px;
+			background-color: red;
+
+		}
+		.f3 a:hover{
+			-webkit-animation: myfirst 10s;
+		}
+
+		@-webkit-keyframes myfirst
+		{
+			0%   {background: red;margin-top: 0;}
+			25%  {background: yellow;margin-top: 20px;}
+			50%  {background: blue;margin-top: -20px;}
+			100% {background: green;margin-top: 0px;}
+		}
+		
+
+		.div {
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			background-color: red;
+			position: absolute;
+			left: 10px;
+			top: 40px;
+			z-index: 100;
+			-webkit-animation: div-f 10s;
+		}
+
+		@-webkit-keyframes div-f{
+			0%   {left: 0;}
+			100%  {left: 80%;}
+		}
+
+	</style>
+</head>
+<body>
+	
+
+	
+
+	<div class='node'>
+		<div class='title'>1.伪元素的使用<em>(使用支持css3的浏览器效果更佳,<a target='_blank' href='https://bitbucket.org/281933726/csscase1/src' >点击查看项目源码</a>)</em></div>
+		<div class='content' >
+			
+			<p>1.变化样式的文本框</p>
+			<div class='d d1'>
+				<input />
+			</div>
+
+			<p>2.对话框</p>
+			<div class='d d2'>
+				你好啊，我是zou12e,欢迎来到这里
+			</div>
+
+
+			<p>3.清楚浮动层</p>
+			<div class='d d7'>
+<pre>
+.clear{zoom:1;}
+.clear:after{
+	display:block; 
+	content:""; 
+	height:0; 
+	clear:both; 
+	overflow:hidden; 
+	visibility:hidden;
+}
+</pre>
+			</div>
+
+
+			
+
+
+		</div>
+		
+
+		
+
+
+	</div>
+
+	<div class='node'>
+		<div class='title'>2.伪类的使用</div>
+			<div class='content' >
+			
+
+				<div class='d f1'>
+					<a href="javascript:void(0)">我是一个a标签，我要使用hover</a>
+				</div>
+
+
+				<p>1.hover + transition(过渡)</p>
+				<div class='d f2'>
+					<a href="javascript:void(0)"></a>
+				</div>
+
+				<p>2.hover + animation(动画)</p>
+				<div class='d f3'>
+					<a href="javascript:void(0)"></a>
+				</div>
+
+
+			</div>
+
+		</div>
+		
+	</div>
+
+
+	<div class='node'>
+		<div class='title'>3.伪元素伪类选择器合并使用</div>
+		<div class='content' >
+			
+
+		
+
+			<p>1.单选框</p>
+			<div class='d d3'>
+				<label>
+					<input name='sex' type="radio" checked>男
+				</label>
+				<label>
+					<input name='sex' type="radio">女
+				</label>
+			</div>
+
+
+			<p>2.复选框</p>
+			<div class='d d4'>
+				<label>
+					<input name='job' type="checkbox">上网
+				</label>
+				<label>
+					<input name='job' type="checkbox">音乐
+				</label>
+				<label>
+					<input name='job' type="checkbox">爬山
+				</label>
+			</div>
+
+			<p>3.被禁止的按钮样式（disabled）</p>
+			<div class='d d5'>
+				
+				<input type='button' value="我是一个按钮" onclick='alert("呵呵");'  />
+
+
+				<input type='button' value="我是一个失效的按钮" disabled onclick='alert("呵呵");'  />
+
+			</div>
+			
+			<p>4.更多</p>
+			<div class='d d6'>
+				<label>
+					<input type="checkbox" checked="">
+				</label>
+			</div>
+
+
+		</div>
+		
+
+
+	</div>
+
+
+
+</body>
+</html>
