@@ -15,7 +15,7 @@
 
 <a href="https://zou12e.github.io/special_effects/photo_wall" target="_blank" >照片墙</a>
 
-<a href="https://zou12e.github.io/special_effects/photo_3d" target="_blank" >相册3d</a>
+<a href="https://zou12e.github.io/special_effects/photo_3d" target="_blank" >3D相册</a>
 
 <a href="https://zou12e.github.io/special_effects/rotate_menu" target="_blank" >旋转菜单</a>
 
