@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding:0;
+}
+.wrapper{
+    width:345px;    
+    margin:100px;
+    padding:15px 10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+.inputBox{
+    position:relative;
+}
+.inputBox .input{
+    display:inline-block;
+    width:300px;
+    padding:15px 10px;
+    box-sizing: border-box;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+.inputBox .pic{
+    position:absolute;
+    width:32px;
+    height:32px;
+    background-image: url('./images/true.png');
+    background-size: 100%;
+    top:50%;
+    margin-top:-16px;
+    right:0;
+    display:none;
+}
+
+.errorText{
+    display:none;
+    color:red;
+    font-size: 12px;
+    margin-top:12px;
+}
+.canvasBox{
+    position:relative;
+    margin-top:15px;
+}
+.canvasBox .imgBox{
+    width:300px;
+    height:80px;
+    bordeR:1px solid #ccc;
+    border-radius:5px;
+}
+.canvasBox .refresh{
+    width:32px;
+    height:32px;
+    position:absolute;
+    background-image: url('./images/update.png');
+    background-size: 100%;
+    right:0;
+    top:50%;   
+    margin-top:-16px;
+    border:0;
+    border-radius:5px;
+    cursor: pointer;
+}
+.submit{
+    border:0;
+    background:#62b900;
+    padding:10px 10px;
+    color:#fff;
+    font-size:18px;
+    margin-top:15px;
+    cursor: pointer;
+    border-radius:5px;
+    padding:10px 20px;
+    
+}
