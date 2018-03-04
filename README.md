@@ -15,8 +15,16 @@
 
 <a href="https://zou12e.github.io/special_effects/photo_wall" target="_blank" >照片墙</a>
 
+<a href="https://zou12e.github.io/special_effects/photo_3d" target="_blank" >相册3d</a>
+
 <a href="https://zou12e.github.io/special_effects/rotate_menu" target="_blank" >旋转菜单</a>
 
 <a href="https://zou12e.github.io/special_effects/whirligig" target="_blank" >旋转木马</a>
+
+<a href="https://zou12e.github.io/special_effects/login" target="_blank" >登录验证</a>
+
+<a href="https://zou12e.github.io/special_effects/login_code" target="_blank" >登录二维码</a>
+
+<a href="https://zou12e.github.io/special_effects/dial" target="_blank" >旋转木马</a>
 
 
