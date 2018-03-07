@@ -27,6 +27,7 @@
 
 <a href="https://zou12e.github.io/special_effects/dial" target="_blank" >大转盘</a>
 
+<a href="https://zou12e.github.io/special_effects/page" target="_blank" >分页</a>
 
 ****
 
