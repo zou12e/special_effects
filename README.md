@@ -39,3 +39,4 @@
 
 <a href="https://zou12e.github.io/special_effects/learn/3" target="_blank" >CSS 常用布局1 </a>
 
+<a href="https://zou12e.github.io/special_effects/learn/svg" target="_blank" >SVG 学习笔记 </a>
