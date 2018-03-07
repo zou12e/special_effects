@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG (3) 基本形状</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<style>
+		.svg {
+			background-color: #f1f1f1;
+		}
+	</style>
+</head>
+
+
+<body>
+	<h2>基本形状</h2>
+	<h3>1.线段(line)</h3>
+	<p>
+		x1:x1坐标      
+		<br> y1:y1坐标
+		<br> x2:x2坐标
+		<br> y2:y2坐标
+		<br> stroke-width 线宽度
+		<br> stroke 线颜色
+		<br> stroke-opacity 线透明度（0-1）
+		<br> stroke-dasharray 虚线（n,n,n,n,n距离）
+	</p>
+	<svg class='svg' width='100' height='100' >
+		<line x1=10 y1=10 x2=90 y2=10 style='stroke:black'  />
+		<line x1=10 y1=35 x2=90 y2=35 style='stroke:black'  />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<line x1=10 y1=10 x2=90 y2=10 style='stroke:black;stroke-width:10px'  />
+		<line x1=10 y1=35 x2=90 y2=35 style='stroke:black;stroke-width:10px'  />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<line x1=10 y1=10 x2=90 y2=10 style='stroke:red;stroke-width:10px'  />
+		<line x1=10 y1=35 x2=90 y2=35 style='stroke:orange;stroke-width:10px'  />
+		<line x1=10 y1=55 x2=90 y2=55 style='stroke:rgba(0,0,0,1);stroke-width:5px'  />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<line x1=10 y1=10 x2=90 y2=10 style='stroke:red;stroke-width:10px;stroke-opacity:.2;'  />
+		<line x1=10 y1=35 x2=90 y2=35 style='stroke:orange;stroke-width:10px;stroke-opacity:.5'  />
+		<line x1=10 y1=55 x2=90 y2=55 style='stroke:rgba(0,0,0,0.5);stroke-width:5px'  />
+	</svg>
+
+	<svg class='svg' width='100' height='100' >
+		<line x1=10 y1=10 x2=90 y2=10 style='stroke:red;stroke-width:10px;stroke-dasharray:5,2;'  />
+		<line x1=10 y1=35 x2=90 y2=35 style='stroke:orange;stroke-width:10px;stroke-dasharray:2,5'  />
+		<line x1=10 y1=55 x2=90 y2=55 style='stroke:rgba(0,0,0,0.5);stroke-width:5px;stroke-dasharray:10;'  />
+	</svg>
+
+	<h3>2.矩形(rect)</h3>
+	<p>
+		x:x坐标      
+		<br> y:y坐标
+		<br> width: 宽度
+		<br> height:高度
+		<br> fill:背景颜色
+		<br> fill-opacity 背景透明度（0-1）
+		<br> rx,ry 圆角
+	</p>
+	<svg class='svg' width='100' height='100' >
+		<rect x=10 y=10  width=80 height=80 style='fill:red;'  />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<rect x=10 y=10  width=80 height=80 style='fill:red;fill-opacity:0.5;'  />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<rect x=10 y=10  width=80 height=80 style='fill:red;stroke:black;stroke-width:10;'  />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<rect x=10 y=10  width=80 height=80 style='fill:red;stroke:black;stroke-width:1;stroke-dasharray:6,2'  />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<rect x=10 y=10 rx=20  ry=10  width=80 height=80 style='fill:red;'  />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<rect x=10 y=10 rx=10  ry=20  width=80 height=80 style='fill:red;'  />
+	</svg>
+
+	<h3>3.圆(circle)</h3>
+	<p>
+		cx:x坐标  （圆心算）    
+		<br> cy:y坐标（圆心算）
+		<br> r: 半径
+	</p>
+	<svg class='svg' width='100' height='100' >
+		<circle cx=50 cy=50  r=30 style='fill:red;'  />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<circle cx=50 cy=50  r=30 style='fill:orange;'  />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<circle cx=50 cy=50  r=30 style='fill:orange;'  />
+	</svg>
+	<h3>4.椭圆(ellipse)</h3>
+	<p>
+		cx:x坐标  （圆心算）    
+		<br> cy:y坐标（圆心算）
+		<br> rx: x半径
+		<br> ry: y半径
+	</p>
+	<svg class='svg' width='100' height='100' >
+		<ellipse cx=50 cy=50   rx=20 ry=30  style='fill:red;' />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<ellipse cx=50 cy=50  rx=30 ry=20  style='fill:orange;'  />
+	</svg>
+	<h3>5.多边形(polygon)</h3>
+	<p>
+		points 路径（x1,y1 x2,y2 x3,y3...）
+	</p>
+	<svg class='svg' width='100' height='100' >
+		<polygon points='15,10 55,10 45,20 5,20'  style='fill:red;' />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<polygon points='35,37.5 37.9,46.1 46.9,46.1 39.7,51.5 42.3,60.1 35,55 27.7,60.1 30.3,51.5  23.1,46.1 32.1,46.1'  style='fill:red;' />
+	</svg>
+
+	<svg class='svg' width='100' height='100' >
+		<polygon points='48,16 16,96 96,48 0,48 80,96'  style='fill:none;stroke:black' />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<polygon points='48,16 16,96 96,48 0,48 80,96'  style='fill:red;stroke:black;fill-rule:nonzero;' />
+	</svg>
+
+	<svg class='svg' width='100' height='100' >
+		<polygon points='48,16 16,96 96,48 0,48 80,96'  style='fill:red;stroke:black;fill-rule:evenodd;' />
+	</svg>
+	<h3>5.折线(polyline)</h3>
+	<p>
+		polyline 路径（x1,y1 x2,y2 x3,y3...）
+		<br>stroke-linecap 折线连接处 miter尖的  round圆的  bevel平的
+		<br>stroke-linejoin 线头线尾 butt精准 round加长圆 square加长
+	</p>
+	<svg class='svg' width='100' height='100' >
+		<polyline points='5 20,20 20, 25 10, 35 30 , 45 10 , 55 30, 65 10 , 75 30 ,80 20 , 95 20 '  style='fill:none;stroke:black' />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<polyline points='5 20,20 20, 25 10, 35 30 , 45 10 , 55 30, 65 10 , 75 30 ,80 20 , 95 20 '  style='fill:none;stroke:black;stroke-dasharray:2,2' />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<polyline points='5 20,20 20, 25 10, 35 30 , 45 10 , 55 30, 65 10 , 75 30 ,80 20 , 95 20 '  style='stroke:black' />
+	</svg>
+
+	<svg class='svg' width='100' height='100' >
+		<polyline points='5 20,20 20, 25 10, 35 30 , 45 10 , 55 30, 65 10 , 75 30 ,80 20 , 95 20 '  
+		style='fill:none;stroke:black;stroke-width:5;stroke-linejoin:miter;stroke-linecap:butt' />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<polyline points='5 20,20 20, 25 10, 35 30 , 45 10 , 55 30, 65 10 , 75 30 ,80 20 , 95 20 '  
+		style='fill:none;stroke:black;stroke-width:5;stroke-linejoin:round;stroke-linecap:round' />
+	</svg>
+	<svg class='svg' width='100' height='100' >
+		<polyline points='5 20,20 20, 25 10, 35 30 , 45 10 , 55 30, 65 10 , 75 30 ,80 20 , 95 20 '  
+		style='fill:none;stroke:black;stroke-width:5;stroke-linejoin:bevel;stroke-linecap:square' />
+	</svg>
+</body>
+</html>
+
+	<!--<title>Cat</title>
+			<desc>Cats desc</desc>
+
+			<circle cx='70' cy='95' r='50' class='head'/>
+
+			<circle cx='55' cy='80' r='5' class='eye'/>
+			<circle cx='85' cy='80' r='5' class='eye'/>
+			circle 圆   cx:x坐标  cy:y坐标  r:半径-->
+			<!--line 线   x1:x1坐标  y1:y1坐标  x2:x2坐标  y2:y2坐标 
+				x1y1  x2y2 连接成线
+			-->
+
+		<!--g 组的概念
+
+		<use xlink:href='#whiskers' transform='scale(-1 1) translate(-140 0)' />
+
+
+		<polyline points='108 62,90 10,70 45,50,10,32,62' class='line'></polyline>
+		<polyline points='35 110,45 120,95 120,105,110' class='line'></polyline>
+
+		<path d='M 75 90 L 65 90 A 5 10 0 0 0 75 90' class='path'  />
+		
+
+		<text x=50 y=165 >Kitty</text>-->

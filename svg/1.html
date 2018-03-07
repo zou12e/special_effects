@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG (1) 认识svg</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<style>
+		
+		.svg {
+			background-color: #f1f1f1;
+		}
+
+		.head {
+			stroke:black; 
+			fill:none;
+		}
+		.eye {
+			stroke:black; 
+			fill:black;
+		}
+		.line {
+			stroke:black; 
+			fill:none;
+		}
+		.line_whisker {
+			stroke:black; 
+			fill:none;
+		}
+		.path {
+			stroke:#333; 
+			fill:#333;
+		}
+		/**
+
+		  stroke： 边框
+		  fill：   填充
+
+		  */
+
+		</style>
+	</head>
+
+
+	<body>
+		<h2>认识svg (我的第一个svg图片)</h2>
+		<svg class='svg' width='140' height='170' >
+			<title>Cat</title>
+			<desc>Cats desc</desc>
+
+			<circle cx='70' cy='95' r='50' class='head'/>
+
+			<circle cx='55' cy='80' r='5' class='eye'/>
+			<circle cx='85' cy='80' r='5' class='eye'/>
+			<!--circle 圆   cx:x坐标  cy:y坐标  r:半径-->
+
+			<g id='whiskers' >
+				<line x1=75 y1=95 x2=135 y2=85 style='stroke:black'  />
+				<line x1=75 y1=95 x2=135 y2=105 style='stroke:black'  />
+			<!--line 线   x1:x1坐标  y1:y1坐标  x2:x2坐标  y2:y2坐标 
+				x1y1  x2y2 连接成线
+			-->
+		</g>
+		<!--g 组的概念-->
+
+		<use xlink:href='#whiskers' transform='scale(-1 1) translate(-140 0)' />
+
+
+		<polyline points='108 62,90 10,70 45,50,10,32,62' class='line'></polyline>
+		<polyline points='35 110,45 120,95 120,105,110' class='line'></polyline>
+
+		<path d='M 75 90 L 65 90 A 5 10 0 0 0 75 90' class='path'  />
+		
+
+		<text x=50 y=165 >Kitty</text>
+	</svg>
+</body>
+</html>
