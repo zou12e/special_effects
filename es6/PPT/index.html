@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>es6</title>
+	<link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/moon.css">
+</head>
+<body>
+	<div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>ES6 标准</h1>
+            </section>
+            <section>
+                <h2>ECMAScript 6 简介</h2>
+                <p class='fragment'>ECMAScript &amp; Javascript</p>
+                <p class="fragment">ES6 &amp; ECMAScript2015</p>
+            </section>
+            <section>
+                <section> 
+                    <h2>一、let 和 const 以及块级作用域</h2>
+                </section>
+	            <section>
+                    <h2>1、块级作用域 </h2>
+                    <p class="fragment">为什么需要块级作用域？？？</p>
+                    <p class="fragment">块级作用域与函数声明</p>
+                </section>
+                <section>
+                    <h2>2、let命令</h2>
+                    <p class="fragment">基本用法</p>
+                    <p class="fragment">不存在变量提升</p>
+                    <p class="fragment">暂时性死区</p>
+                    <p class="fragment">不允许重复声明</p>
+                </section>
+                <section>
+                    <h2>3、const命令</h2>
+                    <p class="fragment">基本用法</p>
+                    <p class="fragment">实质</p>
+                </section>
+                 <section>
+                        <h2>4、其他</h2>
+                 </section>
+        	</section>
+        	<section>
+                <section>
+                    <h2>二、变量的结构赋值</h2>                
+                </section>
+                <section>
+                    <h2>1、数组的解构赋值</h2>
+                    <p class="fragment">实质：模式匹配</p>
+                    <p class="fragment">结构不成功</p>
+                    <p class="fragment">不完全结构</p>
+                    <p class="fragment">默认值</p>
+                </section>
+                <section>
+                    <h2>2、对象的解构赋值</h2>
+                    <p class="fragment">对象解构的基本用法</p>
+                    <p class="fragment">对象解构的实质</p>
+                </section>
+                <section>
+                    <h2>3、其他类型的解构赋值</h2>
+                </section>
+                <section>
+                    <h2>4、使用场景</h2>
+                    <p class="fragment">swap</p>
+                    <p class="fragment">函数返回值的解构</p>
+                    <p class="fragment">形参定义</p>
+                </section>
+        	</section>
+            <section>
+                <section>
+                    <h2>三、字符串的扩展</h2>
+                    <p class="fragment">模板字符串</p>
+                    <p class="fragment">标签模板</p>
+                </section>
+                <section>
+                    <h2>模板字符串</h2>
+                     <p class="fragment">增强的字符串</p>
+                     <p class="fragment">在字符串中添加变量（表达式）</p>
+                </section>
+                <section>
+                    <h2>标签模版</h2>
+                    <p class="fragment">标签模板实质——函数调用的特殊形式</p>
+                    <p class="fragment">重要应用——过滤HTML字符串</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>四、函数的扩展</h2>
+                </section>
+                <section>
+                    <h2>函数参数的默认值</h2>
+                    <p class="fragment">基本使用</p>
+                    <p class="fragment">与结构赋值结合使用</p>
+                    <p class="fragment">参数作用域以及注意事项</p>
+                </section>
+                <section>
+                     <h2>rest参数（扩展运算符）</h2>
+                </section>
+                <section>
+                     <h2>箭头函数</h2>
+                     <p class="fragment">基本使用方法</p>
+                     <p class="fragment">注意事项</p>
+                     <p class="fragment">嵌套的箭头函数</p>
+                </section>
+            </section>
+            <section>
+                <h2>五、数组的扩展</h2>
+                <p class="fragment">扩展运算符回顾（...）</p>
+                <p class="fragment">Array.from() Array.of()</p>
+                <p class="fragment">数组实例的方法copyWithin() </p>
+                <p class="fragment">数组实例的方法fill() entries() keys() values()</p>
+                <p class="fragment">数组实例的方法includes() find() findIndex()</p>
+            </section>
+            <section>
+                <h2>六、对象的扩展</h2>
+                <p class="fragment">属性的简洁表示法以及属性名表达式</p>
+                <p class="fragment">Object.is() Object.assign()</p>
+                <p class="fragment">Object.keys() Object.values() Object.entries()</p>
+                <p class="fragment">对象的扩展运算符</p>
+            </section>
+            <section>
+                <section>
+                    <h2>七、Class 类</h2>
+                    <p class="fragment">class基本使用</p>
+                    <p class="fragment">class的继承</p>    
+                </section> 
+                <section>
+                    <h2>class 的基本使用</h2>
+                    <p class="fragment">constructor, 实例属性, 实例方法</p>
+                    <p class="fragment">this 指向</p>
+                    <p class="fragment">静态属性 静态方法</p>
+                </section>            
+                <section>
+                    <h2>class 的继承</h2>
+                    <p class="fragment">extends</p>
+                    <p class="fragment">super 详解</p>
+                </section>
+            </section>
+            <section>
+                <h2>Promise对象</h2>
+                <p class="fragment">Promise的含义</p>
+                <p class="fragment">基本用法</p>
+                <p class="fragment">实例方法 Promise.prototype.then</p>
+                <p class="fragment">Promise.all, Promise.race</p>
+                <p class="fragment">封装常用方法</p>
+            </section>
+            <section>
+                <h2>探究Promise源码，手动封装！！！</h2>
+            </section>
+            <section>
+                <H2>fetch -新一代的ajax</H2>
+                <p class="fragment">why fetch ???</p>
+                <p class="fragment">fetch 基本使用</p>
+                <p class="fragment">fetch - get/post 请求</p>
+                <p class="fragment">注意</p>
+            </section>
+            <section>
+                <h2 style="font-size: 4.5em;text-align: center;">谢谢大家</h2>
+            </section>
+        </div>
+    </div>
+<script src="js/reveal.js"></script>
+<script>
+    Reveal.initialize({
+	// 是否在右下角展示控制条
+	controls: true,
+	// 是否显示演示的进度条
+    progress: true,
+
+    // 是否显示当前幻灯片的页数
+    slideNumber: 'c/t',
+
+    // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    history: false,
+
+    // 是否启用键盘快捷键来导航
+    keyboard: true,
+
+    // 是否启用幻灯片的概览模式,开启后，可以使用ESC键查看幻灯片概览
+    overview: true,
+
+    // 是否将幻灯片垂直居中
+    center: true,
+
+    // 是否在触屏设备上启用触摸导航
+    touch: true,
+
+    // 是否循环演示
+    loop: false,
+
+    // 是否将演示的方向变成 RTL
+    rtl: false,
+
+    // 全局开启和关闭碎片
+    fragments: true,
+
+    // 标识演示文稿是否在嵌入模式中运行，即包含在屏幕的有限部分中的
+    embedded: false,
+
+    // 标识当问号键被点击的时候是否应该显示一个帮助的覆盖层
+    help: true,
+
+    //  两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    autoSlide: 0,
+
+    // 当遇到用户输入的时候停止切换
+    autoSlideStoppable: true,
+
+    // 是否启用通过鼠标滚轮来导航幻灯片
+    mouseWheel: true,
+
+    //  是否在移动设备上隐藏地址栏
+    hideAddressBar: true,
+
+    // 是否在一个弹出的 iframe 中打开幻灯片中的链接
+    previewLinks: false,
+
+    // 切换过渡效果
+    transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+    // 过渡速度
+    transitionSpeed: 'default', // default/fast/slow
+
+    // 全屏幻灯片背景的过渡效果
+    backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+    // 除当前可见的之外的幻灯片数量
+    viewDistance: 3,
+
+    // 视差背景图片
+    parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // 视差背景尺寸
+    parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+    // 移动视差背景（水平和垂直）滑动变化的数量, 例如100
+    parallaxBackgroundHorizontal: '',
+    parallaxBackgroundVertical: ''
+});
+</script>
+</body>
+</html>

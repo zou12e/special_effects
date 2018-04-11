@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: #e3e3e3;
+}
+.wrapper{
+    width:70%;
+    margin:100px auto;
+    border:1px solid #cecece;
+}
+.com{
+    width:90%;
+    color:#333;
+    margin:20px auto;
+    padding:10px;
+}
+.photoBox{
+    width:90%;
+    margin:10px auto;
+}
+.photos{
+    height:45px;
+}
+.photos img{
+    height:40px;
+    width:40px;
+    cursor: url('img/coverAdd.png'),auto;
+}
+.photos li{
+    width:40px;
+    height:40px;
+    float: left;
+    border:2px solid #f2f2f2;
+    padding:2px;
+    margin-right:12px;
+    position:relative;
+}
+.photos li span{
+    width:0;
+    height:0;
+    border:6px solid transparent;
+    border-top:6px solid #f23d6a;
+    position:absolute;
+    left:15px;
+    opacity: 0;
+    bottom:-8px;
+}
+.photoView{
+    position:relative;
+    margin-top:10px;
+    width:0px;
+    height:0px;
+    overflow: hidden;
+    background-color:#f2f2f2;
+}
+.photoView .navL,
+.photoView .navR{
+    width:40px;
+    display:block;
+    position: absolute;
+    cursor: pointer;
+    top:0;    
+}
+.navL{
+    left:0;
+}
+.navR{
+    right:0;
+}
+.navL span{
+    left:8px;
+}
+.navR span{
+    right:8px;
+}
+.navL span,
+.navR span{
+    display:none;
+    font-size:40px;
+    color:#f23d6a;
+    cursor: pointer;
+    position: absolute;
+}
+
+.photoBox .tm-current {
+    border: 2px solid #f23d6a;
+    border-radius: 2px;
+    cursor: auto;
+}
+.photos .tm-current span{
+    opacity:1;
+    bottom:-12px;
+}
+.photoView,
+.photoView img,
+.photos .tm-current img {
+    cursor: url('img/coverSub.png'), auto;
+}
+
