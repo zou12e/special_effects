@@ -1,6 +1,6 @@
 #### 特效列表
 
-****
+**
 淘宝
 
 <a href="https://zou12e.github.io/special_effects/cart" target="_blank" >购物车</a>
@@ -9,7 +9,7 @@
 
 <a href="https://zou12e.github.io/special_effects/comment" target="_blank" >淘宝评论</a>
 
-****
+**
 相片墙
 
 <a href="https://zou12e.github.io/special_effects/photo_wall" target="_blank" >照片墙</a>
@@ -24,7 +24,7 @@
 
 <a href="https://zou12e.github.io/special_effects/accordion" target="_blank" >手风琴</a>
 
-****
+**
 游戏
 
 <a href="https://zou12e.github.io/special_effects/jigsaw" target="_blank" >拼图</a>
@@ -37,7 +37,7 @@
 
 <a href="https://zou12e.github.io/special_effects/clock" target="_blank" >时钟</a>
 
-****
+**
 项目
 
 <a href="https://zou12e.github.io/special_effects/loading" target="_blank" >loading</a>
@@ -52,7 +52,7 @@
 
 <a href="https://zou12e.github.io/special_effects/dialog" target="_blank" >弹框</a>
 
-****
+**
 
 #### 学习笔记
 
