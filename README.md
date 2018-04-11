@@ -27,6 +27,7 @@
 
 <a href="https://zou12e.github.io/special_effects/dial" target="_blank" >大转盘</a>
 
+<a href="https://zou12e.github.io/special_effects/page" target="_blank" >分页</a>
 
 ****
 
@@ -38,3 +39,4 @@
 
 <a href="https://zou12e.github.io/special_effects/learn/3" target="_blank" >CSS 常用布局1 </a>
 
+<a href="https://zou12e.github.io/special_effects/learn/svg" target="_blank" >SVG 学习笔记 </a>

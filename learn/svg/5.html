@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG (5) 漏斗</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	
+	<script src="jquery-1.11.3.min.js" ></script>
+	<!-- 代表n.css内容-->
+	<style type='text/css' >
+		
+		path {
+			fill:none;
+			stroke:none;
+		}
+	</style>
+	<!-- end -->
+	
+</head>
+
+
+<body>
+	<svg  width='1000' height='1000' style='background-color: #fff;' >
+		<defs>
+			<linearGradient id='color1' x1=0% y1=0% x2=0% y2=100% >
+				<stop offset='0%'   style='stop-color:#39c29d;' />
+				<stop offset='100%' style='stop-color:#007555;' />
+			</linearGradient>
+
+			<linearGradient id='color2' x1=0% y1=0% x2=0% y2=100% >
+				<stop offset='0%'   style='stop-color:#5995bf;' />
+				<stop offset='100%' style='stop-color:#27628a;' />
+			</linearGradient>
+
+			<linearGradient id='color3' x1=0% y1=0% x2=0% y2=100% >
+				<stop offset='0%'   style='stop-color:#e99a2f;' />
+				<stop offset='100%' style='stop-color:#ae6808;' />
+			</linearGradient>
+
+
+			<path id='path1' d='M 55 200 L 45 200 C 40 155 10 150 0 100  L 0 0 100 0 100 100     C 90 150 60 155 55 200' style='fill:url(#color1)'  >
+				<animate  id='animate1'
+				attributeType="XML" 
+				attributeName="d" 
+				values= " " 
+				begin='0s'
+				dur='2s'  
+				repeatCount="1"
+				fill="freeze" />
+			</path >
+
+			<path id='path2' d='
+			M 55 300 L 45 300 
+			C 40 255 10 250 0 200  
+			L 0 100 
+			C 0 50 45 55 45 0  
+			L 55 0
+			C 55 45 95 55 100 100  
+			L 100 200
+			C 90 250 60 255 55 300' style='fill:url(#color2)'  >
+				<animate  id='animate2'
+				attributeType="XML" 
+				attributeName="d" 
+				values= " " 
+				begin='0s'
+				dur='2s'  
+				repeatCount="1"
+				fill="freeze" />
+			</path >
+
+
+			<path id='path3' d='
+			M 200 200 L 0 200 
+			L 0 100 
+			C 0 50 45 55 45 0  
+			L 55 0
+			C 55 45 95 55 100 100  
+			L 100 200
+			' style='fill:url(#color3)'  >
+				<animate  id='animate2'
+				attributeType="XML" 
+				attributeName="d" 
+				values= " " 
+				begin='0s'
+				dur='2s'  
+				repeatCount="1"
+				fill="freeze" />
+			</path >
+
+
+		</defs>
+
+		<use xlink:href='#path1' ></use>
+
+
+		<use xlink:href='#path2' transform='translate(0 200)' ></use>
+
+		<use xlink:href='#path3' transform='translate(0 500)' ></use>
+	</svg>
+</body>
+
+<script type="text/javascript">
+	
+	var list = [
+	"M 55 200 L 45 200 C 40 155 10 150 0 100  L 0 0 100 0 100 100     C 90 150 60 155 55 200;",
+	"M 55 200 L 45 200 C 40 155 10 150 0 100  L 0 100 100 100 100 100 C 90 150 60 155 55 200;",
+	"M 55 200 L 45 200 C 45 200 45 200 45 200 L 45 200 55 200 55 200  C 55 200 55 200 55 200;",
+	
+	
+	]
+
+	var list = [
+	"M 0 0 L 112 0 112 172 C 108 212 70 222 59 264 L 53 264 C 42 222 4 212 0 172 Z;",
+	"M 0 172 L 112 172 112 172 C 108 212 70 222 59 264 L 53 264 C 42 222 4 212 0 172;",
+	]
+
+	
+
+	// $("#animate1").attr("values",list[0]+list[1]);
+
+
+</script>
+</html>
+
